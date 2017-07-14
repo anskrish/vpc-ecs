@@ -15,11 +15,12 @@
   ec2_lc:
     name: "{{ ec2_launch_configuration_name }}"
     image_id: "{{ ec2_ami_id }}"
+    region: us-east-1
     key_name: "{{ key_name }}"
     security_groups: "{{ ec2_security_groups }}"
     instance_type: "{{ ec2_instance_type }}"
     instance_monitoring: "{{ ec2_instance_monitoring }}"
-    instance_profile_name: "{{ ec2_instance_profile_name }}"
+#    instance_profile_name: "{{ ec2_instance_profile_name }}"
     assign_public_ip: "{{ ec2_assign_public_ip }}"
     user_data: "{{ ec2_userdata }}"
 
@@ -28,6 +29,7 @@
   ec2_asg:
     name: "{{ ec2_asg_name }}"
     availability_zones: "{{ ec2_asg_availability_zones }}"
+    region: us-east-1
     launch_config_name: "{{ ec2_launch_configuration_name }}"
     min_size: "{{ ec2_asg_min_size }}"
     max_size: "{{ ec2_asg_max_size }}"
