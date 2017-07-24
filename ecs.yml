@@ -1,6 +1,6 @@
 ---
 - name: ECS Example | Provision all required infrastructure
-  hosts: localhost
+  hosts: 54.235.31.119
   connection: local
   gather_facts: no
   roles:
