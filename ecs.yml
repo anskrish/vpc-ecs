@@ -1,7 +1,7 @@
 ---
 - name: ECS Example | Provision all required infrastructure
-  hosts: 54.235.31.119
-  connection: local
+  hosts: 54.158.33.254
+  #connection: local
   gather_facts: no
   roles:
     # Provision networking
